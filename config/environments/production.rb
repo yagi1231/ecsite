@@ -54,7 +54,7 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
@@ -83,7 +83,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
@@ -93,14 +93,14 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.paperclip_defaults = {
-        storage: :s3,
-        preserve_files: true,
-        s3_host_name: 's3-ap-northeast-1.amazonaws.com',
-        s3_credentials: {
-          access_key_id: ENV['AKIAQUUJEMAAPE76PGOB'],
-          secret_access_key: ENV['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'],
-          s3_region: 'ap-northeast-1'
-        },
-        bucket: 'yagi19971231'
-      }
+    storage: :s3,
+    preserve_files: true,
+    s3_host_name: 's3-ap-northeast-1.amazonaws.com',
+    s3_credentials: {
+      access_key_id: ENV['AKIAQUUJEMAAPE76PGOB'],
+      secret_access_key: ENV['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'],
+      s3_region: 'ap-northeast-1'
+    },
+    bucket: 'yagi19971231'
+  }
 end
