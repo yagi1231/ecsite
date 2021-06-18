@@ -27,8 +27,9 @@ RSpec.feature '課題２', type: :feature do
     # 金額の下にproductの説明があること
     expect(page).to have_selector 'p', text: product.description.to_s
 
-    # ヘッダーのロゴがホームへのリンクになっていること
-    find('.logo_png')
-    visit potepan_index_path
+    #ヘッダーのロゴがホームへのリンクになっていることπ
+    home_link = find(".navbar-brand")    
+    expect(home_link[:href]).to eq potepan_index_path
+
   end
 end

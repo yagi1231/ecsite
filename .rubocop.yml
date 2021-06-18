@@ -12,7 +12,7 @@ AllCops:
     - "node_modules/**/*"
     - "tmp/**/*"
     - "lib/**/*"
-    - "potepanec/**/*"
+    - "spec/**/*"
     
   DisplayCopNames: true
   TargetRubyVersion: 2.6
