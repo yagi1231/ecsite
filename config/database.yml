@@ -51,4 +51,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['jawsdb-asymmetrical-99724']&.sub('mysql://', 'mysql2://') %>
+  url: <%= ENV['jawsdb-animated-61375']&.sub('mysql://', 'mysql2://') %>
